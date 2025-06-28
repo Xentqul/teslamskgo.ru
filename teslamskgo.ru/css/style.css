@@ -1,0 +1,726 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* Десктопная версия */
+.desktop-version {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.left-half {
+    background-color: #090709;
+    color: white;
+    padding: 30px 50px 30px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.left-half h1 {
+    font-size: 6rem;
+    margin-bottom: 20px;
+    font-weight: 650;
+}
+
+.left-half .tagline {
+    font-size: 1.625rem;
+    margin-bottom: 30px;
+}
+
+.left-half .contact-info {
+    display: flex;
+    gap: 10px;
+}
+
+.contact-info a {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: white;
+}
+
+.contact-info a i {
+    font-size: 25px;
+}
+
+.left-half .contact-info a:hover {
+    background-color: white;
+    color: black;
+}
+
+.left-half .phone {
+    font-size: 1.625rem;
+    margin-top: 20px;
+    flex-grow: 1;
+}
+
+.left-half li hr {
+    border: none;
+    height: 1px;
+    background-color: rgb(218, 218, 218);
+    margin: 10px 0;
+    width: 100%;
+}
+
+.left-half .services {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.left-half .services li {
+    font-size: 1.55rem;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.logo-container {
+    position: fixed;
+    top: 50%;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.logo-container img {
+    width: 230px;
+    height: auto;
+}
+
+.right-half {
+    position: relative;
+    background-color: #000;
+}
+
+.right-half img {
+    width: 100%;
+    max-height: 100vh;
+    object-fit: cover;
+}
+
+.info :first-child {
+    padding-bottom: 18px;
+}
+
+.reconstruction-notice {
+    color: #BC1727;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+    position: relative;
+    padding: 10px 0;
+}
+
+.reconstruction-notice span {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.reconstruction-notice span.highlight {
+    color: #e03849;
+    text-shadow: 0 0 8px rgba(232, 47, 66, 0.5);
+    animation: gentle-glow 1.2s ease-in-out infinite alternate;
+}
+
+@keyframes gentle-glow {
+    0% {
+        text-shadow: 0 0 5px rgba(255, 107, 125, 0.3);
+    }
+
+    100% {
+        text-shadow: 0 0 15px rgba(255, 107, 125, 0.7);
+    }
+}
+
+.right-half .info {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    color: white;
+    font-size: 1.2rem;
+    text-align: right;
+}
+
+.right-half .info p {
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 1.25rem;
+}
+
+.right-half .info .home {
+    text-decoration: underline 1px;
+    text-underline-offset: 0.2em;
+    text-decoration-color: #f53d3d;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+/* Мобильная версия */
+.mobile-version {
+    display: none;
+    position: relative;
+    width: 100%;
+    min-height: 99vh;
+    overflow: visible;
+    /* Разрешаем скролл */
+}
+
+.mobile-logo-container {
+    position: relative;
+    z-index: 20;
+    text-align: center;
+    padding: 0px;
+}
+
+.mobile-logo-container img {
+    width: 130px;
+    height: auto;
+}
+
+.mobile-content {
+    position: relative;
+    z-index: 20;
+    padding: 0 25px;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mobile-content h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    font-weight: 650;
+    color: white;
+}
+
+.mobile-tagline {
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.mobile-services {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 25px;
+    width: 100%;
+    max-width: 80%;
+}
+
+.mobile-services li {
+    font-size: 1.5rem;
+    text-align: left;
+    color: white;
+}
+
+.mobile-services hr {
+    border: none;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 15px 0;
+    width: 100%;
+}
+
+.mobile-contact-info {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.mobile-contact-info a {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: white;
+}
+
+.mobile-contact-info a i {
+    font-size: 25px;
+}
+
+.mobile-contact-info a:hover {
+    background-color: white;
+    color: black;
+}
+
+.mobile-info {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.mobile-home {
+    text-decoration: underline 1px;
+    text-underline-offset: 0.2em;
+    text-decoration-color: #f53d3d;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.mobile-phone {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+
+.mobile-reconstruction-notice {
+    color: #BC1727;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 600;
+    padding: 15px;
+    border-radius: 8px;
+    max-width: 80%;
+    margin: 0 auto 30px;
+}
+
+.mobile-reconstruction-notice span {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.mobile-reconstruction-notice span.highlight {
+    color: #e03849;
+    text-shadow: 0 0 8px rgba(232, 47, 66, 0.5);
+    animation: gentle-glow 1.2s ease-in-out infinite alternate;
+}
+
+.mobile-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+}
+
+.black-block {
+    background-color: #090709;
+    width: 100%;
+    position: relative;
+}
+
+.black-block.top {
+    height: 35vh;
+}
+
+.black-block.bottom {
+    display: flex;
+    flex-grow: 1;
+}
+
+.image-container {
+    position: relative;
+
+    /* Градиенты сверху и снизу фото */
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        z-index: 2;
+    }
+
+    &::before {
+        top: 0;
+        background: linear-gradient(to bottom,
+                #090709 0%,
+                transparent 100%);
+    }
+
+    &::after {
+        bottom: 0;
+        background: linear-gradient(to top,
+                #090709 0%,
+                transparent 100%);
+    }
+}
+
+.image-container img {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+    display: block;
+}
+
+/* Медиазапросы для адаптации */
+@media (max-width: 2560px) {
+
+    body {
+        overflow: hidden;
+    }
+
+    .left-half .tagline {
+        font-size: 1.8rem;
+    }
+
+    .logo-container img {
+        width: 180px;
+    }
+}
+
+@media (max-width: 1281px) {
+    body {
+        overflow: visible;
+    }
+
+    .left-half {
+        padding: 30px;
+    }
+
+    .left-half h1 {
+        font-size: 3.4rem;
+    }
+
+    .left-half .services li {
+        font-size: 1.25rem;
+    }
+
+    .right-half .info {
+        bottom: 30px;
+        right: 30px;
+        font-size: 1rem;
+    }
+
+    .mobile-contact-info {
+        padding-top: 35vh;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        overflow: visible;
+    }
+
+    .desktop-version {
+        display: none;
+    }
+
+    .mobile-version {
+        display: block;
+    }
+}
+
+@media (max-width: 576px) {
+
+    body {
+        overflow: visible;
+    }
+
+    .mobile-content h1 {
+        font-size: 3rem;
+    }
+
+    .mobile-tagline {
+        font-size: 1.1rem;
+    }
+
+    .mobile-services li {
+        font-size: 1.25rem;
+    }
+
+    .mobile-contact-info {
+        padding-top: 230px;
+    }
+
+    .mobile-phone {
+        font-size: 1.2rem;
+    }
+
+    .mobile-reconstruction-notice {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 425px) {
+
+    body {
+        overflow: visible;
+    }
+
+    .desktop-version {
+        display: none;
+    }
+
+    .mobile-version {
+        display: block;
+    }
+
+    .mobile-version .container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 376px) {
+    body {
+        overflow: visible;
+    }
+
+    .black-block.top {
+        height: 55vh;
+    }
+}
+
+@media (min-height: 790px) {
+    body {
+        overflow: visible;
+    }
+
+    .black-block.top {
+        height: 40vh;
+    }
+}
+
+/* Для сверхвысоких экранов (Galaxy Fold и т.п.) */
+@media (min-height: 850px) {
+    body {
+        overflow: visible;
+    }
+
+    .black-block.top {
+        height: 35vh;
+    }
+}
+
+@media only screen and (min-device-width: 834px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
+    body {
+        overflow: visible;
+    }
+
+    .mobile-version {
+        display: block;
+    }
+
+    .desktop-version {
+        display: none;
+    }
+
+    .mobile-content h1 {
+        font-size: 4rem;
+    }
+
+    .mobile-tagline {
+        font-size: 1.5rem;
+    }
+
+    .mobile-services li {
+        font-size: 1.8rem;
+    }
+
+    .mobile-contact-info a {
+        width: 70px;
+        height: 70px;
+    }
+
+    .mobile-contact-info a i {
+        font-size: 30px;
+    }
+
+    .black-block.top {
+        height: 25vh;
+    }
+
+    .image-container img {
+        height: 60vh;
+    }
+
+    .mobile-contact-info {
+        padding-top: 25vh;
+    }
+}
+
+/* iPad Air/Mini (768x1024) */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+    body {
+        overflow: visible;
+    }
+
+    .mobile-content h1 {
+        font-size: 3.6rem;
+    }
+
+    .mobile-tagline {
+        font-size: 1.8rem;
+    }
+
+    .mobile-services li {
+        font-size: 1.7rem;
+    }
+
+    .black-block.top {
+        height: 35vh;
+    }
+
+    .mobile-contact-info a {
+        width: 80px;
+        height: 80px;
+    }
+
+    .mobile-info p {
+        font-size: 1.8rem;
+    }
+
+    .mobile-home {
+        font-size: 1.5rem;
+    }
+
+    .mobile-phone {
+        font-size: 2rem;
+    }
+
+    .mobile-contact-info a i {
+        font-size: 35px;
+    }
+
+    .image-container img {
+        height: 55vh;
+    }
+
+    .mobile-contact-info {
+        padding-top: 35vh;
+    }
+
+    .mobile-reconstruction-notice {
+        font-size: 30px;
+    }
+}
+
+/* Горизонтальная ориентация iPad */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1366px) and (orientation: landscape) {
+    body {
+        overflow: visible;
+    }
+
+    .black-block.top {
+        height: 30vh;
+    }
+
+    .image-container img {
+        height: 40vh;
+    }
+
+    .mobile-contact-info {
+        padding-top: 30vh;
+    }
+
+    .mobile-content {
+        padding-bottom: 50px;
+    }
+}
+
+@media only screen and (min-device-width: 820px) and (max-device-width: 1194px) and (-webkit-min-device-pixel-ratio: 2) {
+    body {
+        overflow: visible;
+    }
+
+    .mobile-version {
+        display: block !important;
+    }
+
+    .desktop-version {
+        display: none !important;
+    }
+
+    .mobile-content h1 {
+        font-size: 3.8rem;
+    }
+
+    .black-block.top {
+        height: 25vh;
+    }
+
+    .image-container img {
+        height: 55vh;
+    }
+}
+
+/* Для планшетов ASUS и других Android-устройств с шириной 600-1280px */
+@media only screen and (min-device-width: 600px) and (max-device-width: 1280px) and (-webkit-min-device-pixel-ratio: 1) {
+
+    .desktop-version {
+        display: none !important;
+    }
+
+    .mobile-version {
+        display: block !important;
+    }
+
+    .mobile-tagline {
+        font-size: 1.8rem;
+    }
+
+
+    /* Специфичные стили для планшетов */
+    .mobile-content h1 {
+        font-size: 3.5rem;
+    }
+
+    .mobile-services li {
+        font-size: 1.6rem;
+    }
+
+    .mobile-contact-info a {
+        width: 80px;
+        height: 80px;
+    }
+
+    .mobile-info p {
+        font-size: 1.8rem;
+    }
+
+    .mobile-home {
+        font-size: 1.5rem;
+    }
+
+    .mobile-reconstruction-notice {
+        font-size: 24px;
+    }
+
+    .mobile-phone {
+        font-size: 2rem;
+    }
+
+    .black-block.top {
+        height: 25vh;
+    }
+
+    .image-container img {
+        height: 50vh;
+    }
+}

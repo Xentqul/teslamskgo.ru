@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/logo-ico.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>TeslaMskGO. Сервисный центр Tesla, запчасти в наличии</title>
+</head>
+
+<body>
+    <div class="container mainPage">
+        <!-- Десктопная версия -->
+        <div class="desktop-version">
+            <!-- Левая часть -->
+            <div class="left-half">
+                <h1>TeslaMskGo</h1>
+                <p class="tagline">Ваш проводник в Мир<br> электромобилей Tesla</p>
+                <div class="contact-info">
+                    <a href="https://wa.me/+79936312297"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://t.me/teslamskgo100"><i class="fa-brands fa-telegram"></i></a>
+                    <a href="https://vk.com/teslamskgo1"><i class="fa-brands fa-vk"></i></a>
+                </div>
+                <p class="phone">+7 (995) 795-12-34</p>
+
+                <ul class="services">
+                    <li class="reconstruction-notice" id="animated-text">Сайт временно находится на реконструкции.
+                        Заявки
+                        принимаются по номеру телефона или через соц.сети</li>
+                    <li>
+                        <hr>
+                    </li>
+                    <li>Запчасти Tesla</li>
+                    <li>
+                        <hr>
+                    </li>
+                    <li>Сервисный центр Tesla</li>
+                    <li>
+                        <hr>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Центральная часть (логотип) -->
+            <div class="logo-container">
+                <img src="img/logo.webp" alt="TeslaMSKGo Logo">
+            </div>
+
+            <!-- Правая часть (фото автомобиля) -->
+            <div class="right-half">
+                <img src="img/main.webp" alt="Tesla Car">
+                <div class="info">
+                    <p>Москва<br>10:00-19:00</p>
+                    <p class="home">Москва, Большая Калитниковская улица, 42А</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Мобильная версия -->
+        <div class="mobile-version">
+            <div class="mobile-logo-container">
+                <img src="img/logo.webp" alt="TeslaMSKGo Logo">
+            </div>
+
+            <div class="mobile-content">
+                <h1>TeslaMskGo</h1>
+                <p class="mobile-tagline">Ваш проводник в Мир электромобилей Tesla</p>
+
+                <ul class="mobile-services">
+                    <hr>
+                    <li>Сервисный центр Tesla</li>
+                    <li>
+                        <hr>
+                    </li>
+                    <li>Запчасти Tesla</li>
+                    <li>
+                        <hr>
+                    </li>
+                </ul>
+
+                <div class="mobile-contact-info">
+                    <a href="https://wa.me/+79936312297"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://t.me/teslamskgo100"><i class="fa-brands fa-telegram"></i></a>
+                    <a href="https://vk.com/teslamskgo1"><i class="fa-brands fa-vk"></i></a>
+                </div>
+
+                <div class="mobile-info">
+                    <p>Москва<br>10:00-19:00</p>
+                    <p class="mobile-home">Москва, Большая Калитниковская улица, 42А</p>
+                </div>
+
+                <p class="mobile-phone">+7 (995) 795-12-34</p>
+
+                <div class="mobile-reconstruction-notice" id="mobile-animated-text">
+                    Сайт временно находится на реконструкции. Заявки принимаются по номеру телефона или через соц.сети
+                </div>
+            </div>
+
+            <div class="mobile-background">
+                <div class="black-block top"></div>
+                <div class="image-container">
+                    <img src="img/main.webp" alt="Tesla Car">
+                </div>
+                <div class="black-block bottom"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Анимация для десктопной версии
+            const desktopTextElement = document.getElementById('animated-text');
+            if (desktopTextElement) {
+                animateText(desktopTextElement);
+            }
+
+            // Анимация для мобильной версии
+            const mobileTextElement = document.getElementById('mobile-animated-text');
+            if (mobileTextElement) {
+                animateText(mobileTextElement);
+            }
+
+            function animateText(element) {
+                const text = element.textContent.trim();
+                element.innerHTML = '';
+
+                // Разбиваем текст на символы
+                for (let i = 0; i < text.length; i++) {
+                    const span = document.createElement('span');
+                    span.textContent = text[i];
+                    element.appendChild(span);
+                }
+
+                // Плавная анимация
+                const spans = element.querySelectorAll('span');
+                let current = 0;
+                let timeout;
+
+                function animate() {
+                    // Плавное появление
+                    if (current < spans.length) {
+                        spans[current].classList.add('highlight');
+                        current++;
+                        timeout = setTimeout(animate, 120); // Скорость подсветки
+                    } else {
+                        // Плавное исчезновение
+                        let hideCount = 0;
+                        const hideInterval = setInterval(() => {
+                            if (hideCount < spans.length) {
+                                spans[hideCount].classList.remove('highlight');
+                                hideCount++;
+                            } else {
+                                clearInterval(hideInterval);
+                                current = 0;
+                                setTimeout(animate, 500); // Пауза перед повторением
+                            }
+                        }, 80);
+                    }
+                }
+
+                // Запускаем анимацию
+                animate();
+
+                // Очистка при размонтировании
+                return () => clearTimeout(timeout);
+            }
+        });
+    </script>
+</body>
+
+</html>
