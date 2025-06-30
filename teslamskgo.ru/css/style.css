@@ -6,6 +6,7 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
 }
 
 .container {
@@ -378,7 +379,6 @@ body {
 
 /* Медиазапросы для адаптации */
 @media (max-width: 2560px) {
-
     body {
         overflow: hidden;
     }
@@ -392,6 +392,7 @@ body {
     }
 }
 
+/* Общие стили для десктопов до 1281px */
 @media (max-width: 1281px) {
     body {
         overflow: visible;
@@ -420,157 +421,34 @@ body {
     }
 }
 
-@media (max-width: 768px) {
-    body {
-        overflow: visible;
-    }
-
-    .desktop-version {
-        display: none;
-    }
-
-    .mobile-version {
-        display: block;
-    }
-}
-
-@media (max-width: 576px) {
-
-    body {
-        overflow: visible;
-    }
-
-    .mobile-content h1 {
-        font-size: 3rem;
-    }
-
-    .mobile-tagline {
-        font-size: 1.1rem;
-    }
-
-    .mobile-services li {
-        font-size: 1.25rem;
-    }
-
-    .mobile-contact-info {
-        padding-top: 230px;
-    }
-
-    .mobile-phone {
-        font-size: 1.2rem;
-    }
-
-    .mobile-reconstruction-notice {
-        font-size: 16px;
-    }
-}
-
-@media (max-width: 425px) {
+/* Для планшетов и iPad */
+@media only screen and (min-device-width: 600px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1), 
+     only screen and (min-device-width: 768px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2),
+     only screen and (min-device-width: 820px) and (max-device-width: 1194px) and (-webkit-min-device-pixel-ratio: 2),
+     only screen and (min-device-width: 834px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2),
+     only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
 
     body {
         overflow: visible;
     }
 
     .desktop-version {
-        display: none;
+        display: none !important;
     }
 
     .mobile-version {
-        display: block;
+        display: block !important;
     }
 
-    .mobile-version .container {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: auto;
+    .mobile-content {
+        padding-bottom: 50px;
     }
+
+    /* Можно задать базовые значения и переопределять их внутри конкретных @media */
 }
 
-@media (max-width: 376px) {
-    body {
-        overflow: visible;
-    }
-
-    .black-block.top {
-        height: 55vh;
-    }
-}
-
-@media (min-height: 790px) {
-    body {
-        overflow: visible;
-    }
-
-    .black-block.top {
-        height: 40vh;
-    }
-}
-
-/* Для сверхвысоких экранов (Galaxy Fold и т.п.) */
-@media (min-height: 850px) {
-    body {
-        overflow: visible;
-    }
-
-    .black-block.top {
-        height: 35vh;
-    }
-}
-
-@media only screen and (min-device-width: 834px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
-    body {
-        overflow: visible;
-    }
-
-    .mobile-version {
-        display: block;
-    }
-
-    .desktop-version {
-        display: none;
-    }
-
-    .mobile-content h1 {
-        font-size: 4rem;
-    }
-
-    .mobile-tagline {
-        font-size: 1.5rem;
-    }
-
-    .mobile-services li {
-        font-size: 1.8rem;
-    }
-
-    .mobile-contact-info a {
-        width: 70px;
-        height: 70px;
-    }
-
-    .mobile-contact-info a i {
-        font-size: 30px;
-    }
-
-    .black-block.top {
-        height: 25vh;
-    }
-
-    .image-container img {
-        height: 60vh;
-    }
-
-    .mobile-contact-info {
-        padding-top: 25vh;
-    }
-}
-
-/* iPad Air/Mini (768x1024) */
+/* Конкретные стили для iPad Air / Mini */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
-    body {
-        overflow: visible;
-    }
-
     .mobile-content h1 {
         font-size: 3.6rem;
     }
@@ -623,10 +501,6 @@ body {
 
 /* Горизонтальная ориентация iPad */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1366px) and (orientation: landscape) {
-    body {
-        overflow: visible;
-    }
-
     .black-block.top {
         height: 30vh;
     }
@@ -638,27 +512,30 @@ body {
     .mobile-contact-info {
         padding-top: 30vh;
     }
-
-    .mobile-content {
-        padding-bottom: 50px;
-    }
 }
 
-@media only screen and (min-device-width: 820px) and (max-device-width: 1194px) and (-webkit-min-device-pixel-ratio: 2) {
-    body {
-        overflow: visible;
-    }
 
-    .mobile-version {
-        display: block !important;
-    }
-
-    .desktop-version {
-        display: none !important;
-    }
-
+/* Galaxy Fold и т.п. */
+@media only screen and (min-device-width: 834px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
     .mobile-content h1 {
-        font-size: 3.8rem;
+        font-size: 4rem;
+    }
+
+    .mobile-tagline {
+        font-size: 1.5rem;
+    }
+
+    .mobile-services li {
+        font-size: 1.8rem;
+    }
+
+    .mobile-contact-info a {
+        width: 70px;
+        height: 70px;
+    }
+
+    .mobile-contact-info a i {
+        font-size: 30px;
     }
 
     .black-block.top {
@@ -666,27 +543,20 @@ body {
     }
 
     .image-container img {
-        height: 55vh;
+        height: 60vh;
+    }
+
+    .mobile-contact-info {
+        padding-top: 25vh;
     }
 }
 
-/* Для планшетов ASUS и других Android-устройств с шириной 600-1280px */
+/* Для Android-планшетов */
 @media only screen and (min-device-width: 600px) and (max-device-width: 1280px) and (-webkit-min-device-pixel-ratio: 1) {
-
-    .desktop-version {
-        display: none !important;
-    }
-
-    .mobile-version {
-        display: block !important;
-    }
-
     .mobile-tagline {
         font-size: 1.8rem;
     }
 
-
-    /* Специфичные стили для планшетов */
     .mobile-content h1 {
         font-size: 3.5rem;
     }
@@ -722,5 +592,57 @@ body {
 
     .image-container img {
         height: 50vh;
+    }
+}
+
+/* Мобильные устройства до 768px */
+@media (max-width: 768px) {
+    .desktop-version {
+        display: none;
+    }
+
+    .mobile-version {
+        display: block;
+    }
+}
+
+@media (max-width: 576px) {
+    .mobile-content h1 {
+        font-size: 3rem;
+    }
+
+    .mobile-tagline {
+        font-size: 1.1rem;
+    }
+
+    .mobile-services li {
+        font-size: 1.25rem;
+    }
+
+    .mobile-contact-info {
+        padding-top: 25vh;
+    }
+
+    .mobile-phone {
+        font-size: 1.2rem;
+    }
+
+    .mobile-reconstruction-notice {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 425px) {
+    .mobile-version .container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 376px) {
+    .black-block.top {
+        height: 55vh;
     }
 }
