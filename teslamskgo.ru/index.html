@@ -3,30 +3,108 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <link rel="icon" type="image/png" sizes="32x32" href="img/logo-ico.png" />
-    
-    <!-- Универсальные Open Graph теги -->
-    <meta property="og:title" content="TeslaMskGO. Сервисный центр Tesla, запчасти в наличии" />
-    <meta property="og:description" content="Ремонт и запчасти для Tesla. Оригинальные компоненты, быстрый ремонт." />
-    <meta property="og:image" content="https://teslamskgo.ru/img/openGraph.webp?v=1" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <!-- Основные мета-теги -->
+    <title>TeslaMskGO - Сервисный центр Tesla в Москве | Ремонт и запчасти</title>
+    <meta name="description"
+        content="Сервисный Tesla в Москве. Ремонт любой сложности, оригинальные запчасти с гарантией. Диагностика, тюнинг." />
+    <meta name="keywords"
+        content="ремонт Tesla Москва, запчасти Tesla оригинал, сервисный центр Тесла, диагностика Tesla, обслуживание электромобилей, Tesla Model 3 ремонт, Tesla Model S сервис">
+
+    <!-- Open Graph разметка -->
+    <meta property="og:title" content="TeslaMskGO - Сервисный центр Tesla в Москве" />
+    <meta property="og:description" content="Ремонт и запчасти для Tesla. Оригинальные детали, качественный ремонт." />
+    <meta property="og:image" content="https://teslamskgo.ru/img/openGraph.webp?v=2" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:phone_number" content="+79957951234">
     <meta property="og:url" content="https://teslamskgo.ru/" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="TeslaMskGO" />
-    
-    <!-- Для Telegram (дополнительные гарантии) -->
-    <meta property="og:image:secure_url" content="https://teslamskgo.ru/img/openGraph.webp?v=1" />
+
+    <!-- Для соцсетей -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="https://teslamskgo.ru/img/openGraph.webp?v=1" />
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="css/style.css" />
-    <title>TeslaMskGO. Сервисный центр Tesla, запчасти в наличии</title>
+    <meta property="og:image:secure_url" content="https://teslamskgo.ru/img/openGraph.webp?v=2" />
+
+    <!-- Иконки -->
+    <link rel="icon" type="image/png" href="img/logo-ico.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="img/logo-ico.png" />
+
+    <!-- Шрифты -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" as="style"
+        onload="this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+    </noscript>
+
+    <!-- Предзагрузка ресурсов -->
+    <link rel="preload" href="/img/logo.webp" as="image" />
+    <link rel="preload" href="/img/main.webp" as="image" />
+
+    <!-- Стили -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Schema.org разметка -->
+    <script type="application/ld+json">
+   {
+    "@context": "https://schema.org",
+    "@type": "AutoRepair",
+    "name": "TeslaMskGO",
+    "image": "https://teslamskgo.ru/img/logo.webp",
+    "description": "Полный спектр услуг по Tesla: от замены колёс до ремонта батарей. Диагностика, чип-тюнинг, замена стекол, ремонт подвески, обновление ПО. Оригинальные запчасти с доставкой.",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Большая Калитниковская улица, 42А",
+        "addressLocality": "Москва",
+        "addressCountry": "RU"
+    },
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "55.736417",
+        "longitude": "37.687659"
+    },
+    "telephone": "+79957951234",
+    "openingHours": "Mo-Su 10:00-19:00",
+    "priceRange": "$$-$$$",
+    "url": "https://teslamskgo.ru",
+    "makesOffer": [
+        {
+            "@type": "Offer",
+            "name": "Диагностика Tesla",
+            "description": "Компьютерная диагностика всех систем"
+        },
+        {
+            "@type": "Offer",
+            "name": "Ремонт высоковольтных батарей",
+            "description": "Замена модулей, балансировка ячеек"
+        },
+        {
+            "@type": "Offer",
+            "name": "Чип-тюнинг",
+            "description": "Увеличение мощности и автономности"
+        },
+        {
+            "@type": "Offer",
+            "name": "Активация навигации и автопилота Tesla",
+            "description": "Настройка систем Tesla"
+        },
+        {
+            "@type": "Offer",
+            "name": "Установка сим карты в машину",
+            "description": "Получение доступа к онлайн сервисам и мобильной сети"
+        },
+        {
+            "@type": "Offer",
+            "name": "Починка кондиционеров и тепловых насосов",
+            "description": "Исправление системы кондиционирования и нагрева воздуха"
+        }
+    ]
+}
+</script>
 
     <style>
         .image-fallback {
@@ -35,19 +113,21 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container mainPage">
 
-        <!-- Десктопная версия -->
+        <!-------------------------------------------- DESKTOP VERSION --------------------------------------------->
         <div class="desktop-version">
             <!-- Левая часть -->
             <div class="left-half">
                 <h1>TeslaMskGo</h1>
                 <p class="tagline">Ваш проводник в Мир<br> электромобилей Tesla</p>
                 <div class="contact-info">
-                    <a href=" https://wa.me/+79936312297 "><i class="fa-brands fa-whatsapp"></i></a>
-                    <a href="https://t.me/teslamskgo100 "><i class="fa-brands fa-telegram"></i></a>
-                    <a href="https://vk.com/teslamskgo1 "><i class="fa-brands fa-vk"></i></a>
+                    <a href=" https://wa.me/+79936312297" aria-label="WhatsApp"><i
+                            class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://t.me/teslamskgo100" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+                    <a href="https://vk.com/teslamskgo1" aria-label="VK"><i class="fa-brands fa-vk"></i></a>
                 </div>
                 <p class="phone">+7 (995) 795-12-34</p>
 
@@ -69,23 +149,31 @@
 
             <!-- Центральная часть (логотип) -->
             <div class="logo-container">
-                <img src="img/logo.webp" alt="TeslaMSKGo Logo" onerror="this.classList.add('image-fallback')" />
+                <img src="img/logo.webp" alt="Логотип TeslaMskGO" width="230" height="115" style="height:auto"
+                    onerror="this.classList.add('image-fallback')">
             </div>
 
             <!-- Правая часть (фото автомобиля) -->
             <div class="right-half">
-                <img src="img/main.webp" alt="Tesla Car" onerror="this.classList.add('image-fallback')" />
-                <div class="info">
-                    <p>Москва<br />10:00-19:00</p>
-                    <p class="home">Москва, Большая Калитниковская улица, 42А</p>
+                <img src="img/main.webp" alt="Tesla Model 3" width="1200" height="800" style="object-fit:cover"
+                    onerror="this.classList.add('image-fallback')">
+                <div class="info" itemscope itemtype="http://schema.org/LocalBusiness">
+                    <p itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                        <span itemprop="addressLocality">Москва</span><br />
+                        <meta itemprop="openingHours" content="Mo-Su 10:00-19:00">10:00-19:00
+                    </p>
+                    <p class="home" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                        <span itemprop="streetAddress">Большая Калитниковская улица, 42А</span>
+                    </p>
                 </div>
             </div>
         </div>
 
-        <!-- Мобильная версия -->
+        <!------------------------------------------- MOBILE VERSION ------------------------------------------->
         <div class="mobile-version">
             <div class="mobile-logo-container">
-                <img src="img/logo.webp" alt="TeslaMSKGo Logo" onerror="this.classList.add('image-fallback')" />
+                <img src="img/logo.webp" alt="Логотип TeslaMskGO" width="230" height="115" style="height:auto"
+                    onerror="this.classList.add('image-fallback')">
             </div>
 
             <div class="mobile-content">
@@ -105,17 +193,24 @@
                 </ul>
 
                 <div class="mobile-contact-info">
-                    <a href="https://wa.me/+79936312297 "><i class="fa-brands fa-whatsapp"></i></a>
-                    <a href="https://t.me/teslamskgo100 "><i class="fa-brands fa-telegram"></i></a>
-                    <a href="https://vk.com/teslamskgo1 "><i class="fa-brands fa-vk"></i></a>
+                    <a href="https://wa.me/+79936312297"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://t.me/teslamskgo100"><i class="fa-brands fa-telegram"></i></a>
+                    <a href="https://vk.com/teslamskgo1"><i class="fa-brands fa-vk"></i></a>
                 </div>
 
-                <div class="mobile-info">
-                    <p>Москва<br />10:00-19:00</p>
-                    <p class="mobile-home">Москва, Большая Калитниковская улица, 42А</p>
+                <div class="mobile-info" itemscope itemtype="http://schema.org/LocalBusiness">
+                    <p itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                        <span itemprop="addressLocality">Москва</span><br />
+                        <meta itemprop="openingHours" content="Mo-Su 10:00-19:00">10:00-19:00
+                    </p>
+                    <p class="mobile-home" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                        <span itemprop="streetAddress">Большая Калитниковская улица, 42А</span>
+                    </p>
                 </div>
 
-                <p class="mobile-phone">+7 (995) 795-12-34</p>
+                <p class="mobile-phone">
+                    <a href="tel:+79957951234" style="color: inherit; text-decoration: none;">+7 (995) 795-12-34</a>
+                </p>
 
                 <div class="mobile-reconstruction-notice" id="mobile-animated-text">
                     Сайт временно находится на реконструкции. Заявки принимаются по номеру телефона или через соц.сети
@@ -125,7 +220,8 @@
             <div class="mobile-background">
                 <div class="black-block top"></div>
                 <div class="image-container">
-                    <img src="img/main.webp" alt="Tesla Car" onerror="this.classList.add('image-fallback')" />
+                    <img src="img/main.webp" alt="Tesla Model 3" width="1200" height="800" style="object-fit:cover"
+                        onerror="this.classList.add('image-fallback')">
                 </div>
                 <div class="black-block bottom"></div>
             </div>
