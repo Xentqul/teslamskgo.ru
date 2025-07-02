@@ -42,6 +42,7 @@ body {
 
 .left-half .contact-info {
     display: flex;
+    flex-grow: 1;
     gap: 10px;
 }
 
@@ -70,8 +71,6 @@ body {
 
 .left-half .phone {
     font-size: 1.625rem;
-    margin-top: 20px;
-    flex-grow: 1;
 }
 
 .left-half li hr {
@@ -86,6 +85,13 @@ body {
     list-style: none;
     padding: 0;
     margin: 0;
+    width: 100%;
+}
+
+.service-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
 }
 
@@ -176,7 +182,7 @@ body {
     transition: color 0.3s ease;
 }
 
-/* Мобильная версия */
+/*------------------------------------------- МОБИЛЬНАЯ ВЕРСИЯ ------------------------------------*/
 .mobile-version {
     display: none;
     position: relative;
@@ -293,6 +299,14 @@ body {
     font-weight: 500;
 }
 
+.mobile-services li {
+    text-align: center;
+}
+
+.mobile-services li.mobile-phone a {
+    display: block;
+    margin-top: 4px;
+}
 .mobile-reconstruction-notice {
     color: #BC1727;
     font-size: 16px;

@@ -62,7 +62,7 @@
 
     <!-- Schema.org разметка -->
     <script type="application/ld+json">
-   {
+{
     "@context": "https://schema.org",
     "@type": "AutoRepair",
     "name": "TeslaMskGO",
@@ -70,16 +70,19 @@
     "description": "Полный спектр услуг по Tesla: от замены колёс до ремонта батарей. Диагностика, чип-тюнинг, замена стекол, ремонт подвески, обновление ПО. Оригинальные запчасти с доставкой.",
     "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Большая Калитниковская улица, 42А",
+        "streetAddress": "Волгоградский проспект, 28",
         "addressLocality": "Москва",
         "addressCountry": "RU"
     },
     "geo": {
         "@type": "GeoCoordinates",
-        "latitude": "55.736417",
-        "longitude": "37.687659"
+        "latitude": "55.725737",
+        "longitude": "37.682377"
     },
-    "telephone": "+79957951234",
+    "telephone": [
+        "+7 (995) 795-12-34",
+        "+7 (925) 501-12-34"
+    ],
     "openingHours": "Mo-Su 10:00-19:00",
     "priceRange": "$$-$$$",
     "url": "https://teslamskgo.ru",
@@ -136,23 +139,30 @@
                 <h1>TeslaMskGo</h1>
                 <p class="tagline">Ваш проводник в Мир<br> электромобилей Tesla</p>
                 <div class="contact-info">
-                    <a href=" https://wa.me/+79936312297" aria-label="WhatsApp"><i
-                            class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://wa.me/+79936312297" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
                     <a href="https://t.me/teslamskgo100" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
                     <a href="https://vk.com/teslamskgo1" aria-label="VK"><i class="fa-brands fa-vk"></i></a>
                 </div>
-                <p class="phone">+7 (995) 795-12-34</p>
 
                 <ul class="services">
-                    <li class="reconstruction-notice" id="animated-text">Сайт временно находится на реконструкции. Заявки принимаются по номеру телефона или через соц.сети</li>
+                    <li class="reconstruction-notice" id="animated-text">
+                        Сайт временно находится на реконструкции. Заявки принимаются по номеру телефона или через
+                        соц.сети
+                    </li>
                     <li>
                         <hr />
                     </li>
-                    <li>Запчасти Tesla</li>
+                    <li class="service-item">
+                        <span>Запчасти Tesla</span>
+                        <span class="phone-number">+7 (925) 501-12-34</span>
+                    </li>
                     <li>
                         <hr />
                     </li>
-                    <li>Сервисный центр Tesla</li>
+                    <li class="service-item">
+                        <span>Сервисный центр Tesla</span>
+                        <span class="phone-number">+7 (995) 795-12-34</span>
+                    </li>
                     <li>
                         <hr />
                     </li>
@@ -175,7 +185,7 @@
                         <meta itemprop="openingHours" content="Mo-Su 10:00-19:00">10:00-19:00
                     </p>
                     <p class="home" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                        <span itemprop="streetAddress">Большая Калитниковская улица, 42А</span>
+                        <span itemprop="streetAddress">Волгоградский проспект, 28</span>
                     </p>
                 </div>
             </div>
@@ -216,13 +226,27 @@
                         <meta itemprop="openingHours" content="Mo-Su 10:00-19:00">10:00-19:00
                     </p>
                     <p class="mobile-home" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                        <span itemprop="streetAddress">Большая Калитниковская улица, 42А</span>
+                        <span itemprop="streetAddress">Волгоградский проспект, 28</span>
                     </p>
                 </div>
 
-                <p class="mobile-phone">
-                    <a href="tel:+79957951234" style="color: inherit; text-decoration: none;">+7 (995) 795-12-34</a>
-                </p>
+                <ul class="mobile-services">
+                    <hr />
+                    <li>Сервисный центр Tesla</li>
+                    <li class="mobile-phone">
+                        <a href="tel:+79957951234" style="color: inherit; text-decoration: none;">+7 (995) 795-12-34</a>
+                    </li>
+                    <li>
+                        <hr />
+                    </li>
+                    <li>Запчасти Tesla</li>
+                    <li class="mobile-phone">
+                        <a href="tel:+79255011234" style="color: inherit; text-decoration: none;">+7 (925) 501-12-34</a>
+                    </li>
+                    <li>
+                        <hr />
+                    </li>
+                </ul>
 
                 <div class="mobile-reconstruction-notice" id="mobile-animated-text">
                     Сайт временно находится на реконструкции. Заявки принимаются по номеру телефона или через соц.сети
