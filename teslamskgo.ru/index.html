@@ -42,8 +42,14 @@
     <meta name="thumbnail" content="https://teslamskgo.ru/img/openGraph.webp?v=3" />
 
     <!-- Иконки -->
-    <link rel="icon" type="image/png" href="img/logo-ico.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="img/logo-ico.png" />
+    <!-- Favicon 120x120 (основной для Яндекса и современных браузеров) -->
+    <link rel="icon" href="img/favicon.png" type="image/png" sizes="120x120">
+
+    <!-- Для старых систем и поддержки других размеров -->
+    <link rel="icon" href="img/favicon.png" type="image/png">
+
+    <!-- Apple Touch Icon (можно указать 180x180 или оставить автоматический выбор) -->
+    <link rel="apple-touch-icon" href="img/favicon.png">
 
     <!-- Шрифты -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" as="style"
@@ -146,8 +152,7 @@
 
                 <ul class="services">
                     <li class="reconstruction-notice" id="animated-text">
-                        Сайт временно находится на реконструкции. Заявки принимаются по номеру телефона или через
-                        соц.сети
+                        Сайт временно находится на реконструкции. Заявки принимаются по номеру телефона или через соц.сети
                     </li>
                     <li>
                         <hr />
